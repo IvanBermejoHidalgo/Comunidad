@@ -2,21 +2,48 @@
 <%@ page import="java.util.*, model.Propietario, model.Comunidad" %>
 <%
     Comunidad comunidad = (Comunidad) session.getAttribute("comunidad");
-    List<model.Propietario> propietarios = comunidad != null ? comunidad.getPropietarios() : new ArrayList<>();
+    List<Propietario> propietarios = comunidad != null ? comunidad.getPropietarios() : new ArrayList<>();
 %>
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Propietarios</title>
+    <title>PROPIETARIS</title>
+    <style>
+        body { font-family: monospace; }
+        table { border-collapse: collapse; width: 100%; }
+        th, td { padding: 5px; text-align: left; border-bottom: 1px solid #ddd; }
+        th { background-color: #f2f2f2; }
+        .divider { border-bottom: 1px solid black; }
+        .footer { border-top: 1px solid black; }
+    </style>
 </head>
 <body>
-    <h2>Lista de propietarios</h2>
-    <ul>
-        <% for (model.Propietario p : propietarios) { %>
-            <li><%= p.toString() %></li>
+    <div style="text-align: center; font-weight: bold; font-size: 1.2em;">PROPIETARIS:</div>
+    <br>
+    <table>
+        <tr>
+            <th>C.</th>
+            <th>Nom Propietari</th>
+            <th>Email</th>
+            <th>Propietats</th>
+        </tr>
+        <tr><td colspan="4" class="divider"></td></tr>
+        <% for (Propietario p : propietarios) { %>
+            <tr>
+                <td><%= p.getCodigo() %></td>
+                <td><%= p.getNombre() %></td>
+                <td><%= p.getEmail() %></td>
+                <td><%= p.getPropiedadesFormateadas() %></td>
+            </tr>
         <% } %>
-    </ul>
+        <tr><td colspan="4" class="divider"></td></tr>
+        <tr>
+            <td colspan="4" style="text-align: right;">
+                <%= propietarios.size() %> propietaris total
+            </td>
+        </tr>
+    </table>
     <a href="resumen.jsp">Volver al resumen</a>
 </body>
 </html>

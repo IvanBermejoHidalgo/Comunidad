@@ -15,4 +15,10 @@ public class Gasto {
     public void setImporte(double importe) { this.importe = importe; }
     public Zona getZona() { return zona; }
     public void setZona(Zona zona) { this.zona = zona; }
+    
+    @Override
+    public String toString() {
+        return String.format("%s - %s - %.2f€ - Zona: %s", 
+            codigo, descripcion, importe, zona != null ? zona.getNombre() : "N/A");
+    }
 }

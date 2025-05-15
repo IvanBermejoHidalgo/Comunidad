@@ -26,4 +26,18 @@ public class Propietario {
     public void setPropiedades(List<Propiedad> propiedades) { this.propiedades = propiedades; }
     public Map<Zona, Double> getTotalesPorZona() { return totalesPorZona; }
     public void setTotalesPorZona(Map<Zona, Double> totalesPorZona) { this.totalesPorZona = totalesPorZona; }
+    
+    @Override
+    public String toString() {
+        return nombre;
+    }
+    
+    public String getPropiedadesFormateadas() {
+        StringBuilder sb = new StringBuilder();
+        for (Propiedad propiedad : propiedades) {
+            if (sb.length() > 0) sb.append(",");
+            sb.append(propiedad.getCodigo());
+        }
+        return sb.toString();
+    }
 }

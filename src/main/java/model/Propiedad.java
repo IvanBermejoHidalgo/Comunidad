@@ -7,8 +7,8 @@ public class Propiedad {
     private String codigo;
     private double metrosCuadrados;
     private Propietario propietario;
-    private Map<Zona, Double> porcentajesPorZona = new HashMap<>(); // Ej: {Zona-Escala: 8%}
-    private String tipoPropiedad; // "HH", "HNH", "L", "G"
+    private Map<Zona, Double> porcentajesPorZona = new HashMap<>();
+    private String tipoPropiedad;
     private String informacionAdicional;
     private Cuota cuota = new Cuota();
 
@@ -27,4 +27,16 @@ public class Propiedad {
     public void setInformacionAdicional(String informacionAdicional) { this.informacionAdicional = informacionAdicional; }
     public Cuota getCuota() { return cuota; }
     public void setCuota(Cuota cuota) { this.cuota = cuota; }
+    
+    public String getPorcentajesFormateados() {
+        StringBuilder sb = new StringBuilder();
+        for (Map.Entry<Zona, Double> entry : porcentajesPorZona.entrySet()) {
+            if (sb.length() > 0) sb.append(" ");
+            sb.append(entry.getKey().getCodigo())
+              .append("-")
+              .append(entry.getValue())
+              .append("%");
+        }
+        return sb.toString();
+    }
 }

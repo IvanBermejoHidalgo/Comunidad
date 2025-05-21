@@ -20,14 +20,7 @@
 <head>
     <meta charset="UTF-8">
     <title>QUOTES PER PROPIETATS</title>
-    <style>
-        body { font-family: monospace; }
-        table { border-collapse: collapse; width: 100%; margin-bottom: 20px; }
-        th, td { padding: 5px; text-align: left; border-bottom: 1px solid #ddd; }
-        th { background-color: #f2f2f2; }
-        .divider { border-bottom: 1px solid black; }
-        .right { text-align: right; }
-    </style>
+    <link rel="stylesheet" href="resources/css/style.css">
 </head>
 <body>
     <div style="text-align: center; font-weight: bold;">QUOTES PER PROPIETATS:</div>

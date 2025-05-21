@@ -12,14 +12,34 @@ Comunidad comunidad = (Comunidad) session.getAttribute("comunidad");
 </head>
 <body>
     <h2>Resumen de la Comunidad</h2>
-    <ul>
-        <li>Comunidad: <%= comunidad.getCodigo() %> - <%= comunidad.getNombre() %></li>
-        <li>Número de zonas: <%= comunidad.getZonas().size() %></li>
-        <li>Número de propiedades: <%= comunidad.getPropiedades().size() %></li>
-        <li>Número de propietarios: <%= comunidad.getPropietarios().size() %></li>
-        <li>Número de gastos: <%= comunidad.getGastos().size() %></li>
-    </ul>
     
+    <table>
+        <tr>
+            <th>Campo</th>
+            <th>Valor</th>
+        </tr>
+        <tr>
+            <td>Comunidad</td>
+            <td><%= comunidad.getCodigo() %> - <%= comunidad.getNombre() %></td>
+        </tr>
+        <tr>
+            <td>Número de zonas</td>
+            <td><%= comunidad.getZonas().size() %></td>
+        </tr>
+        <tr>
+            <td>Número de propiedades</td>
+            <td><%= comunidad.getPropiedades().size() %></td>
+        </tr>
+        <tr>
+            <td>Número de propietarios</td>
+            <td><%= comunidad.getPropietarios().size() %></td>
+        </tr>
+        <tr>
+            <td>Número de gastos</td>
+            <td><%= comunidad.getGastos().size() %></td>
+        </tr>
+    </table>
+
     <nav>
         <a href="propiedades.jsp">Ver propiedades</a>
         <a href="propietarios.jsp">Ver propietarios</a>

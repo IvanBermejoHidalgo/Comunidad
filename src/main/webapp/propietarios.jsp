@@ -9,14 +9,7 @@
 <head>
     <meta charset="UTF-8">
     <title>PROPIETARIS</title>
-    <style>
-        body { font-family: monospace; }
-        table { border-collapse: collapse; width: 100%; }
-        th, td { padding: 5px; text-align: left; border-bottom: 1px solid #ddd; }
-        th { background-color: #f2f2f2; }
-        .divider { border-bottom: 1px solid black; }
-        .footer { border-top: 1px solid black; }
-    </style>
+    <link rel="stylesheet" href="resources/css/style.css">
 </head>
 <body>
     <div style="text-align: center; font-weight: bold; font-size: 1.2em;">PROPIETARIS:</div>

@@ -20,14 +20,6 @@ List<Propiedad> propiedades = comunidad.getPropiedades();
             border-collapse: collapse;
             margin-top: 1rem;
         }
-        th, td {
-            border: 1px solid #ccc;
-            padding: 0.5rem;
-            text-align: left;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
         a {
             display: inline-block;
             margin-top: 1rem;

@@ -20,14 +20,14 @@ Aplicación web desarrollada en Java que permite gestionar comunidades de propie
 Comunidad/
 ├── src/
 │ ├── main/java/
-│ │ ├── controllers/ # Servlets (AuthController.java, PostController.java)
-│ │ ├── models/ # Clases (Usuario.java, Post.java)
-│ │ └── utils/ # Utilidades (Database.java, SessionUtils.java)
+│ │ ├── controllers/
+│ │ ├── models/
+│ │ ├── service/
+│ │ └── utils/
 │ ├── main/webapp/
 │ │ ├── WEB-INF/ # web.xml
-│ │ ├── assets/ # CSS/JS/imágenes
-│ │ └── views/ # JSPs (login.jsp, home.jsp, profile.jsp)
-├── database/ # Scripts SQL (si aplica)
+│ │ ├── resources/ # CSS
+│ │ └── views/ # JSP
 └── README.md
 ```
 
